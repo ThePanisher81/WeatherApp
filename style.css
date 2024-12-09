@@ -1,38 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    background-attachment: fixed; /* Ensures gradient stays consistent */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures full coverage of the screen */
+    color: #333;
     text-align: center;
     padding: 50px;
+    margin: 0;
 }
 
+
 .weather-container {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     margin: 0 auto;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.weather-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
 
 input {
-    padding: 10px;
-    margin-right: 10px;
+    padding: 12px;
+    margin: 10px 5px;
     font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(50% - 22px);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.7);
+    outline: none;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 30px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #43cea2, #185a9d);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
 }
 
 #weatherDisplay {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 18px;
-    padding: 10px;
-    background-color: #e0f7fa;
+    padding: 20px;
+    background: rgba(236, 240, 241, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+#weatherDisplay h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+#weatherDisplay p {
+    margin: 10px 0;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+@media (max-width: 480px) {
+    input {
+        width: calc(100% - 22px);
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
