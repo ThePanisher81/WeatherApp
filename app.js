@@ -44,7 +44,7 @@ function displayWeather(data) {
 
         weatherDisplay.innerHTML = `
             <h2>Weather in ${data.city} (${timeString})</h2>
-            <p>Temperature: ${data.temperature}Â°C</p>
+            <p>Temperature: ${data.temperature}°C</p>
             <p>Description: ${data.description}</p>
             <p>Humidity: ${data.humidity}%</p>
             <p>Wind Speed: ${windSpeedInKmh} km/h</p>
